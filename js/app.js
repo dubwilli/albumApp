@@ -20,8 +20,20 @@ $(document).ready(function () {
                 for (let alb in allAlbums) {
                     let albumFavorite = allAlbums[alb].album;
                     let $favoriteListElement = $('<li></li>');
+
+                    // create delete element
+                    let $deleteElement = $('<button>DELETE</button>');
+                    $deleteElement.on('click', function (e) {
+                        let id = $(e.target.parentNode).data('id');
+                        deleteAlbum(id);
+                    });
+
                     $favoriteListElement.attr('data-id', alb);
                     $favoriteListElement.html(albumFavorite);
+
+                    // add delete element
+                    $favoriteListElement.append($deleteElement);
+
                     albums.push($favoriteListElement);
                 }
                 $favoritesContainer.empty();
@@ -31,6 +43,12 @@ $(document).ready(function () {
             });
         };
         getFavoriteAlbums();
+        function deleteAlbum(id) {
+            // find message whose objectId is equal to the id we're searching with
+            var albumReference = messageAppReference.ref('favoritedAlbums/' + id);
+        
+            albumReference.remove();
+          }
         //function searches the api for an album based off the query
         $('.search-button').click(function() {
             //query variable
