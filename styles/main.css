@@ -1,0 +1,116 @@
+/* General styles */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+  }
+input {
+     display: block;
+     margin : 0 auto;
+}
+button {
+    display: block;
+    margin : 0 auto;
+}
+  nav ul {
+	padding:0;
+	margin:0;
+  margin-right: 30px;
+	list-style: none;
+	position: relative;
+	}
+
+nav ul li {
+	display:inline-block;
+	background-color: #CC0020;
+  position: relative;
+}
+
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 40px;
+  right: -30px;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+
+/* First Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Main Section */
+#main {
+  margin-top: 65px;
+}
+
+/* Individual Article Styling */
+.article {
+  border-bottom: 1px solid #ccc;
+  transition: 0.2s all;
+}
+
+.article:hover {
+  padding: 0 2%;
+  background-color: #eee;
+}
+
+.article .featuredImage {
+  width: 12%;
+  float: left;
+  margin: 1.5%;
+  max-width: 60px;
+}
+
+.article .featuredImage img {
+  max-width: 100%;
+  border-radius: 50px;
+}
+
+.article .articleContent {
+  width: 70%;
+  float: left;
+}
+
+.article .articleContent a {
+  text-decoration: none;
+}
+
+.article .articleContent h3 {
+  margin-bottom: 0;
+  color: navy;
+}
+
+.article .articleContent h6 {
+  margin-top: 0;
+  color: #666;
+}
+
+.article .upvotes {
+  width: 15%;
+  float: right;
+  font-size: 30px;
+  margin-top: 15px;
+  text-align: right;
+  color: black;
+}
+
+#section-main {
+    overflow:hidden;
+}
+#section-fav {
+    width:220px;
+    margin-left:30px;
+    float:right;
+}

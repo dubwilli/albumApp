@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Search</title>
+    <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/html5bp.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/main.css" media="screen" charset="utf-8">
+</head>
+<body>
+    <section id="search-bar" class="container">
+    <div class="center">
+    <input class="search-input" type="text" placeholder="search for an album">
+    <button class="search-button">Search</button>
+</div>
+</section>
+    <section id="main" class="container">
+        <article class="article">
+          <section class="featuredImage">
+            <img src="images/article_placeholder_1.jpg" alt="" />
+          </section>
+          <section class="articleContent">
+              <a href="#"><h3><div class="title" id="title-id">album title</div></h3></a>
+              <h6>Artist</h6>
+          </section>
+          <section class="favorites">
+            Click to favorite
+          </section>
+          <div class="clearfix"></div>
+        </article>
+        </section>
+    <section id="fav" class="container">
+        <h1>Favorites</h1>
+        <div id="favBoard">
+        <ul>
+            <li>test</li>
+        </ul>
+    </div>
+    </section>
+        
+    <!-- js -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script>
+    //web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyATjdUFSxTUJtI2ciGpxY20eWxt-UgBDcM",
+    authDomain: "albumapp-50e4d.firebaseapp.com",
+    projectId: "albumapp-50e4d",
+    storageBucket: "albumapp-50e4d.appspot.com",
+    messagingSenderId: "866529853757",
+    appId: "1:866529853757:web:f0e688b702762d6da10554",
+    databaseURL: "https://albumapp-50e4d-default-rtdb.firebaseio.com/"
+};
+// Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+<!-- Bootstrap JS -->
+    <script rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="js/app.js"></script>
+</body>
+</html>
